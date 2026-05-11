@@ -1,6 +1,6 @@
 {
   "name": "viking-api-skill",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "Claude Code skill for Viking KnowledgeBase HTTP API reference",
   "scripts": {
     "postinstall": "node scripts/install.js"
