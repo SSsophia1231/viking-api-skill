@@ -26,7 +26,9 @@ jobs:
           Arcosite_AK: ${{ secrets.ARCOSITE_AK }}
           Arcosite_SK: ${{ secrets.ARCOSITE_SK }}
         run: |
-          python3 scripts/arcosite.py download --out-dir /tmp/docs-latest
+          python3 scripts/arcosite.py download \
+            --out-dir /tmp/docs-latest \
+            --include-path "docs/Viking 知识库/API参考"
 
       - name: Copy docs to resources/
         run: |
