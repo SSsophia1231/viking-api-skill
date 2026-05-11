@@ -1,16 +1,16 @@
 ---
 name: viking-api
-description: 解答 Viking 知识库 HTTP API 的接口参数、鉴权方式、调用示例及错误排查，当用户询问知识库 API 接口（签名鉴权、知识库/文档/切片/知识服务/文档解析/飞书集成/Pipeline 等）相关问题时使用。
+description: 根据 Viking 知识库 HTTP API 文档帮用户编写调用脚本和代码，覆盖签名鉴权、知识库/文档/切片/知识服务/Pipeline 等全部模块，当用户需要生成、调试或封装 Viking 知识库 API 相关代码时使用。
 version: 1.0.0
 ---
 
 ## 使用场景
 
-本 skill 适用于回答 Viking 知识库 HTTP API 的一切问题，包括：
-- 签名鉴权与 AK/SK 配置
-- 各模块接口的请求参数、响应字段、错误码
-- 多语言调用示例
-- 文档解析、切片管理、检索问答、Pipeline 等能力的 API 接入
+本 skill 适用于基于 Viking 知识库 HTTP API 编写调用代码，包括：
+- 生成 Python / Go / Java / curl 等多语言的完整调用脚本
+- 封装签名鉴权逻辑
+- 实现文档上传、检索、问答等端到端流程的代码
+- 调试接口报错、定位参数问题
 
 ## Viking 知识库 API 助手
 
