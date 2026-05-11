@@ -1,18 +1,25 @@
 # viking-api-skill
 
-Viking 知识库 HTTP API 参考文档的 Claude Code Skill，覆盖知识库、文档、切片、知识服务、下载、Pipeline 等全部模块。
+Viking 知识库 HTTP API 参考文档，覆盖知识库、文档、切片、知识服务、下载、Pipeline 等全部模块，可集成到各类 AI Agent 工具中使用。
 
-## 安装
+## 包含内容
+
+- 签名鉴权与 AK/SK 配置
+- 知识库（Collection）增删改查、检索、对话补全
+- 文档（Doc）上传、查询、更新、按条件检索
+- 切片（Point）增删改查
+- 知识服务（Service）对话接口
+- 文件下载
+- Pipeline 实验版本接口
+- Rerank 重排
+
+## 在 Claude Code 中使用
 
 ```bash
 npm install -g viking-api-skill
 ```
 
-安装后 skill 自动复制到 `~/.claude/skills/viking-api/`，在 Claude Code 中直接使用 `/viking-api` 触发。
-
-## 使用
-
-在 Claude Code 中：
+安装后在 Claude Code 中直接输入 `/viking-api` 触发，例如：
 
 ```
 /viking-api 如何调用 search_knowledge 接口？
@@ -20,30 +27,14 @@ npm install -g viking-api-skill
 /viking-api Pipeline create 接口的参数有哪些？
 ```
 
-## 更新
+skill 每次调用时会自动检查并同步最新版本的文档。
 
-文档随版本迭代。skill 每次被调用时会自动检查并同步最新版本。
+## 在其他 Agent 中使用
 
-也可手动更新：
+本仓库的文档以 Markdown 格式存放在 `resources/` 目录下，导引入口为 `resources/index.md`。
 
-```bash
-npm update -g viking-api-skill
-```
+任何支持读取文件或 GitHub 内容的 Agent，均可直接引用 `resources/index.md` 作为 Viking 知识库 API 的导航起点。
 
-## 发版说明（维护者）
+## License
 
-每次文档更新后：
-
-```bash
-# 1. 更新 resources/ 下的文档文件
-# 2. 生成版本元数据
-python3 scripts/build_release.py 1.x.x
-# 3. 同步 package.json 版本号后提交
-git add -A
-git commit -m "docs: v1.x.x"
-git tag v1.x.x
-git push origin main --tags
-# 4. 发布到 npm
-npm version 1.x.x
-npm publish
-```
+Apache-2.0
