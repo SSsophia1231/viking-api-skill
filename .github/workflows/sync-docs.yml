@@ -1,0 +1,70 @@
+name: Sync API Docs
+
+on:
+  schedule:
+    - cron: '0 2 1 * *'  # 每月 1 日 UTC 02:00（北京时间 10:00）
+  workflow_dispatch:       # 支持手动触发
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Download latest docs
+        env:
+          Arcosite_AK: ${{ secrets.ARCOSITE_AK }}
+          Arcosite_SK: ${{ secrets.ARCOSITE_SK }}
+        run: |
+          python3 scripts/arcosite.py download --out-dir /tmp/docs-latest
+
+      - name: Copy docs to resources/
+        run: |
+          rsync -av --delete /tmp/docs-latest/ resources/ \
+            --exclude='.arcosite_meta.json' \
+            --exclude='version' \
+            --exclude='meta.json'
+
+      - name: Check for changes
+        id: diff
+        run: |
+          git diff --quiet resources/ \
+            && echo "changed=false" >> $GITHUB_OUTPUT \
+            || echo "changed=true" >> $GITHUB_OUTPUT
+
+      - name: Build release
+        if: steps.diff.outputs.changed == 'true'
+        run: python3 scripts/build_release.py $(date +%Y-%m-%d)
+
+      - name: Commit and push
+        if: steps.diff.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add resources/
+          git commit -m "sync: update API docs $(date +%Y-%m-%d)"
+          git push
+
+      - uses: actions/setup-node@v4
+        if: steps.diff.outputs.changed == 'true'
+        with:
+          node-version: '20'
+          registry-url: 'https://registry.npmjs.org'
+
+      - name: Publish to npm
+        if: steps.diff.outputs.changed == 'true'
+        run: |
+          npm version patch --no-git-tag-version
+          npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
