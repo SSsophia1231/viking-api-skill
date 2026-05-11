@@ -1,6 +1,8 @@
 # viking-api-skill
 
-Viking 知识库 HTTP API 参考文档，覆盖知识库、文档、切片、知识服务、下载、实验版本等全部模块，可集成到各类 AI Agent 工具中使用，帮助快速撰写脚本，完成知识库能力集成。
+帮助开发者快速接入 Viking 知识库 HTTP API。内置完整 API 参考文档，覆盖 Viking 知识库、文档、切片、知识服务、下载、实验版本 等全部模块，可直接生成调用脚本，无需手查文档。
+
+产品官方文档：https://www.volcengine.com/docs/84313/2117716?lang=zh
 
 ## 能做什么
 
@@ -25,11 +27,3 @@ npm install -g viking-api-skill
 ```
 
 skill 每次调用时会自动检查并同步最新版本的文档。
-
-## 产品文档
-
-[Viking 知识库官方文档](https://www.volcengine.com/docs/84313/2117716?lang=zh)
-
-## License
-
-Apache-2.0
