@@ -22,18 +22,13 @@ npm install -g viking-api-skill
 安装后在 Claude Code 中直接输入 `/viking-api` 触发，例如：
 
 ```
-/viking-api 如何调用 search_knowledge 接口？
-/viking-api 签名鉴权怎么做？
-/viking-api Pipeline create 接口的参数有哪些？
+/viking-api 帮我用 Python 写一个上传文档并轮询解析状态的脚本
+/viking-api 用 Go 实现签名鉴权，并调用 search_knowledge 接口
+/viking-api 写一个 curl 脚本，创建知识库并批量上传文档
+/viking-api 帮我封装一个 Python 类，覆盖知识库的增删改查
 ```
 
 skill 每次调用时会自动检查并同步最新版本的文档。
-
-## 在其他 Agent 中使用
-
-本仓库的文档以 Markdown 格式存放在 `resources/` 目录下，导引入口为 `resources/index.md`。
-
-任何支持读取文件或 GitHub 内容的 Agent，均可直接引用 `resources/index.md` 作为 Viking 知识库 API 的导航起点。
 
 ## License
 
