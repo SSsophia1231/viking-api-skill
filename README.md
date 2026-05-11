@@ -1,6 +1,6 @@
 # viking-api-skill
 
-Viking 知识库 HTTP API 参考文档，覆盖知识库、文档、切片、知识服务、下载、Pipeline 等全部模块，可集成到各类 AI Agent 工具中使用。
+Viking 知识库 HTTP API 参考文档，覆盖知识库、文档、切片、知识服务、下载、实验版本 等全部模块，可集成到各类 AI Agent 工具中使用，帮助快速撰写脚本，完成知识库能力集成。
 
 ## 包含内容
 
