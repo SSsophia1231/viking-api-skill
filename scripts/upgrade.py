@@ -3,6 +3,7 @@
 Incrementally sync local resources from GitHub raw content.
 
 Flow:
+- Skip check if last check was within TTL_DAYS
 - Fetch remote version from GitHub
 - Compare with local resources/version
 - If changed, fetch meta.json and diff with local
@@ -15,6 +16,7 @@ import json
 import shutil
 import sys
 import tempfile
+import time
 from pathlib import Path, PurePosixPath
 from typing import Any, Dict
 from urllib.error import HTTPError, URLError
@@ -28,6 +30,8 @@ GITHUB_RAW_BASE = "https://raw.githubusercontent.com/SSsophia1231/viking-api-ski
 VERSION_URL = f"{GITHUB_RAW_BASE}/version"
 META_URL = f"{GITHUB_RAW_BASE}/meta.json"
 LOCAL_VERSION_PATH = TARGET_DIR / "version"
+LAST_CHECK_PATH = TARGET_DIR / ".last_check"
+TTL_DAYS = 7
 LOCAL_META_PATH = TARGET_DIR / "meta.json"
 REQUEST_TIMEOUT_SECONDS = 30
 
@@ -158,8 +162,19 @@ def _write_text(file_path: Path, content: str) -> None:
     file_path.write_text(content, encoding="utf-8")
 
 
+def _within_ttl() -> bool:
+    if not LAST_CHECK_PATH.exists():
+        return False
+    elapsed = time.time() - LAST_CHECK_PATH.stat().st_mtime
+    return elapsed < TTL_DAYS * 86400
+
+
 def main() -> int:
     TARGET_DIR.mkdir(parents=True, exist_ok=True)
+
+    if _within_ttl():
+        print(f"skipping update check (checked within {TTL_DAYS} days)")
+        return 0
 
     try:
         remote_version = _fetch_text(VERSION_URL).strip()
@@ -172,9 +187,11 @@ def main() -> int:
         print("warning: remote version is empty, skipping update", file=sys.stderr)
         return 0
 
+    LAST_CHECK_PATH.touch()
+
     local_version = _read_text_if_exists(LOCAL_VERSION_PATH).strip()
     if local_version == remote_version:
-        print(f"resources are up to date (v{remote_version})")
+        print(f"resources are up to date ({remote_version})")
         return 0
 
     print(f"update available: {local_version or 'none'} -> {remote_version}")
