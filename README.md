@@ -1,17 +1,13 @@
 # viking-api-skill
 
-Viking 知识库 HTTP API 参考文档，覆盖知识库、文档、切片、知识服务、下载、实验版本 等全部模块，可集成到各类 AI Agent 工具中使用，帮助快速撰写脚本，完成知识库能力集成。
+Viking 知识库 HTTP API 参考文档，覆盖知识库、文档、切片、知识服务、下载、实验版本等全部模块，可集成到各类 AI Agent 工具中使用，帮助快速撰写脚本，完成知识库能力集成。
 
-## 包含内容
+## 能做什么
 
-- 签名鉴权与 AK/SK 配置
-- 知识库（Collection）增删改查、检索、对话补全
-- 文档（Doc）上传、查询、更新、按条件检索
-- 切片（Point）增删改查
-- 知识服务（Service）对话接口
-- 文件下载
-- Pipeline 实验版本接口
-- Rerank 重排
+- 根据需求生成完整的调用脚本（Python / Go / Java / curl 等）
+- 处理签名鉴权，补全请求参数，避免手查文档
+- 覆盖知识库创建、文档上传与解析、向量检索、RAG 问答等端到端流程
+- 定位接口报错、解释响应字段、给出修复建议
 
 ## 在 Claude Code 中使用
 
@@ -29,6 +25,10 @@ npm install -g viking-api-skill
 ```
 
 skill 每次调用时会自动检查并同步最新版本的文档。
+
+## 产品文档
+
+[Viking 知识库官方文档](https://www.volcengine.com/docs/84313/2117716?lang=zh)
 
 ## License
 
