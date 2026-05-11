@@ -1,0 +1,235 @@
+{
+  "version": "1.0.0",
+  "files": [
+    {
+      "path": "Rerank重排.md",
+      "size": 5343,
+      "md5": "7250af6ad9c5858fd0a90092cd17a0b5"
+    },
+    {
+      "path": "index.md",
+      "size": 5428,
+      "md5": "b41ab48716589a59e9dd17660dc01543"
+    },
+    {
+      "path": "下载/download.md",
+      "size": 3146,
+      "md5": "e55e6e8813ba2624d21ee4e2d0593c8d"
+    },
+    {
+      "path": "下载/info.md",
+      "size": 2935,
+      "md5": "c138a5638c943419bfda1c2cf1b7a871"
+    },
+    {
+      "path": "切片/add.md",
+      "size": 4545,
+      "md5": "c43b8c7420b9d3745468f0aeb4077471"
+    },
+    {
+      "path": "切片/delete.md",
+      "size": 2750,
+      "md5": "9bb82bebea4d9ebe095e058fe26ed49e"
+    },
+    {
+      "path": "切片/info.md",
+      "size": 7686,
+      "md5": "d9c9f21e7f6718a02643af1be9431c22"
+    },
+    {
+      "path": "切片/list.md",
+      "size": 7393,
+      "md5": "6863c1b99a1f57eb28e678e705ca88b0"
+    },
+    {
+      "path": "切片/list（新）.md",
+      "size": 6436,
+      "md5": "d46e73dd5d70e675425594e4ce587699"
+    },
+    {
+      "path": "切片/update.md",
+      "size": 3758,
+      "md5": "6f1f54fdc4433146f7279f5eb35606c9"
+    },
+    {
+      "path": "实验版本（新）/batch-to-pipeline.md",
+      "size": 3199,
+      "md5": "d26978798e8a853c4c2c6f85541eb90d"
+    },
+    {
+      "path": "实验版本（新）/create.md",
+      "size": 9541,
+      "md5": "c81a40fe2f8c99c6cdfeb9c7f3a47c53"
+    },
+    {
+      "path": "实验版本（新）/delete.md",
+      "size": 2655,
+      "md5": "daca4695e27f90b4b76c62bb11586222"
+    },
+    {
+      "path": "实验版本（新）/info.md",
+      "size": 3592,
+      "md5": "2c20b078c0e0a0fb9331989f428ae29c"
+    },
+    {
+      "path": "实验版本（新）/list.md",
+      "size": 3748,
+      "md5": "f7fd61ca8dc7d449b1910c233fa4958a"
+    },
+    {
+      "path": "实验版本（新）/re-process.md",
+      "size": 2960,
+      "md5": "2891c709836ac688b8441e8f01ebc4b8"
+    },
+    {
+      "path": "实验版本（新）/set-default-pipeline.md",
+      "size": 2180,
+      "md5": "b0566fa3037ff5cde7e7d4bcc54e6973"
+    },
+    {
+      "path": "实验版本（新）/update.md",
+      "size": 4435,
+      "md5": "54cc93c5f071dbfb58badd075dea5d8e"
+    },
+    {
+      "path": "文档/add.md",
+      "size": 12108,
+      "md5": "21bb516c3d28543a6a83c0978775486f"
+    },
+    {
+      "path": "文档/add（新）.md",
+      "size": 6122,
+      "md5": "bdefcbe7a720b56f48d3842a770366ee"
+    },
+    {
+      "path": "文档/delete.md",
+      "size": 3093,
+      "md5": "3b7e5645b642820f0ca9b3f5b3a09e68"
+    },
+    {
+      "path": "文档/info.md",
+      "size": 10783,
+      "md5": "ca40b8eae23b2d58d6f7fddd5b215ad1"
+    },
+    {
+      "path": "文档/list.md",
+      "size": 8017,
+      "md5": "f920ca8617debd821b466dda93903296"
+    },
+    {
+      "path": "文档/list（新）.md",
+      "size": 8380,
+      "md5": "e27a56bb6d5f4123a1334a5ddd0d7213"
+    },
+    {
+      "path": "文档/search_by_filter.md",
+      "size": 6044,
+      "md5": "a09e05afac42b0e27e513d174b0a47fb"
+    },
+    {
+      "path": "文档/update.md",
+      "size": 2458,
+      "md5": "e4e70e747ba5f36a56f53ec690f532c6"
+    },
+    {
+      "path": "文档/update_meta.md",
+      "size": 4073,
+      "md5": "a6f32c778980968374fe4e5a6af23a95"
+    },
+    {
+      "path": "文档/文档处理报错处理手册.md",
+      "size": 3443,
+      "md5": "b2ccf879be329d2408c2b25c0ac9cd50"
+    },
+    {
+      "path": "知识库/chat_completions（新）.md",
+      "size": 11319,
+      "md5": "75d512e8bc9c9f9fb746d40b02cbc95d"
+    },
+    {
+      "path": "知识库/create.md",
+      "size": 20960,
+      "md5": "e26a55c9cffda7749e20ec20c80249ee"
+    },
+    {
+      "path": "知识库/delete.md",
+      "size": 2607,
+      "md5": "463880fe7e764acc07707101e2255eba"
+    },
+    {
+      "path": "知识库/info.md",
+      "size": 10931,
+      "md5": "4d25aaf78bd05f664bcf13939da35047"
+    },
+    {
+      "path": "知识库/list.md",
+      "size": 8388,
+      "md5": "6aba2d1271dea8111ecc86bae49d92e6"
+    },
+    {
+      "path": "知识库/search_and_generate（即将下线）.md",
+      "size": 17396,
+      "md5": "084786ee83b07e5f0eb5ad787018f460"
+    },
+    {
+      "path": "知识库/search_collection.md",
+      "size": 1343,
+      "md5": "55c1c23f57a6bbc3b7bbe5d1e676254a"
+    },
+    {
+      "path": "知识库/search_knowledge（新）.md",
+      "size": 18981,
+      "md5": "d4d40d4eaff2e14d279c04d26b57747a"
+    },
+    {
+      "path": "知识库/search（即将下线）.md",
+      "size": 10592,
+      "md5": "318ec91d491775cce0069d900f71bcec"
+    },
+    {
+      "path": "知识库/update.md",
+      "size": 6062,
+      "md5": "aa19afca729df050ba90e8493809cdf6"
+    },
+    {
+      "path": "知识库/知识库图文问答样例.md",
+      "size": 11515,
+      "md5": "2295c98bfaa28b8c60f86becef38d0f6"
+    },
+    {
+      "path": "知识库/知识库多轮检索问答样例.md",
+      "size": 8568,
+      "md5": "d31c7dc9ec0b548582970d8b3a15cf7c"
+    },
+    {
+      "path": "知识库/知识库视频问答样例.md",
+      "size": 12030,
+      "md5": "574642684157b89cf98d08679e825490"
+    },
+    {
+      "path": "知识库/知识库输出图文混排样例.md",
+      "size": 34365,
+      "md5": "6e291e2a5266f67922e39ebdd82f4a97"
+    },
+    {
+      "path": "知识库私网连接方式.md",
+      "size": 7605,
+      "md5": "262772b27f5152a6d621a7494abe22a2"
+    },
+    {
+      "path": "知识服务/chat（推荐）.md",
+      "size": 13856,
+      "md5": "b04f48f30f0e94f16d277f4c83bd518e"
+    },
+    {
+      "path": "知识服务/list.md",
+      "size": 3397,
+      "md5": "683b5ba71f33dd8840f19c4239d743af"
+    },
+    {
+      "path": "签名鉴权与调用示例.md",
+      "size": 24615,
+      "md5": "82eebe45c2839aab77dd454f8618e48c"
+    }
+  ]
+}
